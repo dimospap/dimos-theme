@@ -1,0 +1,164 @@
+/********* NAVIGATION ********/
+.navbar {
+
+    padding: 2em;
+    align-self: center;
+    position: relative;
+    z-index: 2;
+
+
+    .logo {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        
+        h1 {
+            font-size: inherit;
+        }
+        span {
+            color: var(--accent-color);
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-left: 0.5em;
+        overflow: hidden;
+        white-space: nowrap;
+
+        .menu-btn {
+            cursor: pointer;
+            align-self: flex-end;
+            right: 1em;
+            height: 1em;
+            width: 28px;
+            margin-right: 1em;
+            z-index: 2;
+        
+            .menu-btn-burger {
+                position: absolute;
+                width: 28px;
+                height: 3px;
+                color: var(--accent-color);
+                background-color: var(--text-color);
+                @include transform-ease;
+        
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -8px;
+                    width: 28px;
+                    height: 3px;
+                    background-color: var(--text-color);
+                    @include link-ease;
+                }
+        
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    width: 20px;
+                    height: 3px;
+                    background-color: var(--accent-color);
+                    @include link-ease;
+                }
+        
+                &.open {
+                    transform: rotate(2turn);
+                    background: transparent;
+        
+                    &::before {
+                        transform: rotate(45deg) translate(5px, 8px);
+                    }
+                    
+                    &::after {
+                        width: 28px;
+                        background-color: var(--text-color);
+                        transform: rotate(-45deg) translate(3px, -7px);
+                    }
+                }
+            }
+        }
+
+        nav {
+            visibility: hidden;
+            position: fixed;
+            display: block;
+            width: 100vw;
+            background-color: var(--shadow-color);
+            height: 100%;
+            margin-left: 0;
+            top: 0;
+            left: 0;
+            transform: translateY(-100%);
+            @include transform-ease;
+            
+            &.open {
+                visibility: visible;
+                transform: translateY(0);
+                @include transform-ease;
+            }
+       
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 100vh;
+                overflow: hidden;
+                flex-wrap: wrap;
+
+                li {
+
+                    a {
+                        color: var(--text-color);
+                        font-size: 2rem;
+                        text-decoration: none;
+                        padding: 0 1em 0 1em;
+                    }
+    
+                    a:hover {
+                        color: var(--accent-color);
+                        @include link-ease;
+                    }
+    
+                    a.current{
+                        font-weight: bold;
+                        color: var(--accent-color);
+                    }
+                }
+
+                .contact_btn a::before {
+                    content: ' [ ';
+                }
+
+                .contact_btn a::after {
+                    content: ' ] ';
+                }
+            }
+        }
+    }
+}
+
+.skip-nav {
+    background: var(--accent-color);
+    padding: .5em 1.5em;
+    left: 0.5rem;
+    position: absolute;
+    z-index:100;
+    transform: translateY(-120%);
+    @include transform-ease;
+    color: var(--shadow-color);
+    text-decoration: none;
+}
+
+.skip-nav:focus {
+    transform: translateY(0);
+}

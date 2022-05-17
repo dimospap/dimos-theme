@@ -1,0 +1,160 @@
+.contact {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    margin-top: 3em;
+
+    .info_container {
+        background-color: rgb(32, 32, 32);
+        width: 100%;
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 0;
+
+        .contactback {
+            position: absolute;
+            width: 40vw;
+            height: 40vw;
+            max-width: 400px;
+            max-height: 400px;
+            bottom: 0;
+            right: 0;
+            fill: var(--shadow-color);
+            z-index: -1;
+        }
+    }
+
+    .form_container {
+        background-color: var(--shadow-color);
+        width: 100%;
+        grid-column: 1/-1;
+        grid-row: 2/-1;
+        display: flex;
+        justify-content: center;
+        padding: 0.5em 0 1em 0;
+    }
+
+    .contact_info {
+        padding: 1em;
+        font-size: 0.8rem;
+
+        .contact_text {
+            line-height: 1.5rem;
+            padding: 0 0 1em 0;
+            text-align: justify;
+            text-justify: inter-character;
+        }
+
+        .contact_ways {
+            padding: 1em 1em 1em 0;
+            display: inline-block;
+
+            svg {
+                width: 16px;
+                height: 16px;
+                fill: var(--headline-color);
+                vertical-align: middle;
+            }
+        }
+
+        .contact_social_title {
+            margin: 2em 0 0 0;
+        }
+        
+        .contact_social {
+            display: flex;
+            flex-direction: row;
+            font-size: 0.8rem;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            justify-content: space-around;
+
+                a > span{
+                    vertical-align: middle;
+                    display: inline-block;                    
+                    
+                    & > svg {
+                        fill: var(--headline-color);
+                        vertical-align: middle;
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+
+                a:hover svg{
+                    fill: var(--accent-color);
+                    transition: fill 800ms ease-out;
+                }
+        }
+    }
+    .wpcf7 {
+        padding: 0;
+
+        .wpcf7-form {
+            width: 100%;
+
+            .contact_headline {
+                display: block;
+                font-size:  1.5rem;
+                color: var(--text-color);
+                padding: 0;
+            }
+
+            p {
+                padding: 0.5em 0 0.5em 0;
+                font-size: 0.8rem;
+
+                .wpcf7-text, .wpcf7-textarea {
+                    background: var(--headline-color);
+                    border: none;
+                    border-radius: 5px;
+                    color: var(--text-color);
+                    width: 100%;
+                    min-width: 20ch;
+                    max-width: 30ch;
+                    overflow: hidden;
+                    resize: none;
+                }
+
+                .wpcf7-submit {
+                    cursor: pointer;
+                    width: 120px;
+                    height: 2.5em;
+                    color: var(--accent-color);
+                    background-color: var(--shadow-color);
+                    border: 1px solid var(--accent-color);
+                    border-radius: 5px;
+                }
+
+                .wpcf7-submit:hover {
+                    color: var(--shadow-color);
+                    background-color: var(--accent-color);
+                    font-weight: bold;
+                    transition: color 100ms, background-color 100ms, font-weight 100ms;
+                }
+
+                .wpcf7-not-valid-tip {
+                    font-size: 0.7rem;
+                }
+            }
+
+
+            .wpcf7-response-output {
+                font-size: 0.8rem;
+                color: var(--headline-color);
+                background-color: var(--light-shadow-color);
+                max-width: 30ch;
+                text-align: center;
+                border: 0px;
+                border-radius: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+/******** FOOTER ********/
+
+footer {
+    background-color: var(--shadow-color);
+    margin-top: 0em;
+    width: 100%;
+    display: block;
+    
+    .social-links {
+        margin-bottom: 3em;
+            
+        ul { 
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 0 3em;
+            list-style-type: none;
+            margin:0;
+                        
+            li {
+                display:inline;
+                padding: 2em 0 0 0;
+
+                a > span{
+                    vertical-align: middle;
+                    display: inline-block;                    
+                    
+                    & > svg {
+                        fill: var(--text-color);
+                        vertical-align: middle;
+                    }
+                }
+
+                a:hover svg{
+                    fill: var(--accent-color);
+                    transition: fill 800ms ease-out;
+                }
+            }
+        }
+    }
+
+    .copyright, .poweredbywordpress {
+        display: block;
+        color: var(--headline-color);
+        font-size: 0.7rem;
+        text-align: center;
+        justify-content: baseline;
+
+        a{
+            color: var(--headline-color);
+            font-size: inherit;
+        }
+
+        a:hover{
+            color: var(--accent-color);
+            @include link-ease;
+        }
+    }
+}

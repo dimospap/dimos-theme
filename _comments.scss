@@ -1,0 +1,103 @@
+.comments-section {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    justify-self: center;
+    max-width: calc(70ch - 1em);
+}
+
+.comment-respond {
+    padding: 1em;
+    margin: 1em 1em;
+    border: 1px solid var(--light-shadow-color);
+}
+
+.comments_header, .comment-reply-title {
+    display: block;
+    font-size:  1.5rem;
+    color: var(--text-color);
+    padding: 0;
+    
+    a {
+        font-size: 1.5rem;
+    }
+}
+
+.comment-text, #author, #email {
+    background: var(--headline-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--text-color);
+    width: 100%;
+    min-width: 20ch;
+    max-width: 100%;
+    overflow: hidden;
+    resize: none;
+    margin: 0;
+}
+
+.comment-notes, .comment-form-cookies-consent, .logged_in_as {
+    font-size: 0.8rem;
+    color: var(--headline-color);
+    margin-bottom: 1em;
+}
+
+#cancel-comment-reply-link {
+    font-size: 0.8rem;
+}
+
+#cancel-comment-reply-link::before {
+    content: ' - ';
+}
+
+.comment-submit {
+    cursor: pointer;
+    width: 140px;
+    height: 2em;
+    color: var(--accent-color);
+    background-color: var(--shadow-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.comment-submit:hover {
+    color: var(--shadow-color);
+    background-color: var(--accent-color);
+    font-weight: bold;
+    transition: color 100ms, background-color 100ms, font-weight 100ms;
+}
+
+.comments {
+    padding: 1em;
+    margin: 1em;
+    border: 1px solid var(--light-shadow-color);
+
+    .all-comments, & ul{
+        list-style-type: none;
+    }
+    
+    .comment-meta {
+        background-color: var(--shadow-color);
+        margin: 1em 0;
+
+        .vcard * {
+            display: inline;
+            vertical-align: middle;
+        }
+    }
+    .comment-metadata {
+        display: flex;
+        justify-content: space-between;
+
+        & * {
+            font-size: 0.8rem;
+            vertical-align: middle;
+        }
+    }
+}
+
+.comment-reply-link {
+    font-size: 0.8rem;
+    color: var(--headline-color);
+}
