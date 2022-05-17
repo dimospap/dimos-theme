@@ -12,7 +12,7 @@
                     
                 </li>
                 <li>
-                    <a href="#" target="_blank">
+                    <a href="https://github.com/dimospap" target="_blank">
                         <span><svg width="20" height="20" fill="#707070" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
                             <use xlink:href="#github-icon"></use>
                         </svg></span>

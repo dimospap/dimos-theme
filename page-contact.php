@@ -16,7 +16,7 @@
                             <use xlink:href="#lnkdin-icon"></use>
                         </svg></span>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="https://github.com/dimospap" target="_blank">
                         <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
                             <use xlink:href="#github-icon"></use>
                         </svg></span>
